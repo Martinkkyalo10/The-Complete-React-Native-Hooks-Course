@@ -7,7 +7,7 @@ const ImageDetail = (props) => {
   return (
     <View>
       {/* require statement provide the path of the image location */}
-      <Image source={require("../../assets/beach.jpg")} />
+      <Image source={props.imageSource} />
       <Text>{props.title}</Text>
     </View>
   );
