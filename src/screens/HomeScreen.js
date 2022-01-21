@@ -12,7 +12,7 @@ const HomeScreen = () => {
         // detecting user press
         onPress={() => console.log("Button pressed")}
       />
-      <TouchableOpacity onPress={() => console.log("List pressed")}>
+      <TouchableOpacity onPress={() => props.navigation.navigate("List")}>
         <Text>Go to List Demo</Text>
       </TouchableOpacity>
     </View>
