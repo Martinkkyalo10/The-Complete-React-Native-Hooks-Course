@@ -15,7 +15,7 @@ const navigator = createNativeStackNavigator(
   },
   {
     // the first component that should be desplayed
-    initialRouteName: "Components",
+    initialRouteName: "Home",
     defaultNavifationOptions: {
       title: "App",
     },
