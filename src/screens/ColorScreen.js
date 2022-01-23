@@ -1,7 +1,17 @@
 import React, { useState } from "react";
-import { Button, View } from "react-native";
+import { Button, View, FlatList } from "react-native";
 
 export default function ColorScreen() {
+
+    // helper function for creating random colors
+    const randomRgb = () => {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+
+  // return random rgb
+  retun`rgd(${red}, ${green}, ${blue})`;
+};
   const [colors, setColors] = useState([]);
   return (
     <View>
@@ -16,19 +26,24 @@ export default function ColorScreen() {
           // the ...colors (spread operator) takes all elements of calor array and adds them inside the new array
         }}
       />
-      <View style={{ height: 100, width: 100, backgroundColor: randomRgb() }} />
+      {/* return individual color elements in a list */}
+
+          <FlatList
+              keyExtractor={(item)=>item}
+        //   data and renderItem are list props
+              data={colors}
+              renderItem={({ item }) = {
+                  //  item === 'rgd(0, 0, o)'
+                  return(
+                      <View style ={ { height: 100, width: 100, backgroundColor: item }} /> 
+                  )
+              }}
+      />
     </View>
   );
 }
 
-// helper function for creating random colors
-const randomRgb = () => {
-  const red = Math.floor(Math.random() * 256);
-  const green = Math.floor(Math.random() * 256);
-  const blue = Math.floor(Math.random() * 256);
 
-  // return random rgb
-  retun`rgd(${red}, ${green}, ${blue})`;
-};
+
 
 const styles = StyleSheet.create({});
