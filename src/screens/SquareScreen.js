@@ -11,6 +11,10 @@ const reducer = (state, action) => {
   // action=== {colorToChange: 'red' || 'green' || 'blue', amount: 15||-15 }
   switch (action.colorToChange) {
     case "red":
+      // adding validation
+     return state.red + action.amount > 255 || state.red + action.amount < 0) ?
+        state : {...state,
+        red: state.red + action.amount}
       return {
         // making a new object by taking the existing state of the object and copying them into the new one
         ...state,
@@ -18,6 +22,9 @@ const reducer = (state, action) => {
         red: state.red + action.amount,
       };
     case "green":
+     return state.green + action.amount > 255 || state.green + action.amount < 0) ?
+        state : {...state,
+        green: state.green + action.amount}
       return {
         // making a new object by taking the existing state of the object and copying them into the new one
         ...state,
@@ -26,6 +33,10 @@ const reducer = (state, action) => {
       };
 
     case "blue":
+       return state.blue + action.amount > 255 || state.blue + action.amount < 0) ?
+        state : {...state,
+        blue: state.blue + action.amount}
+      
       return {
         // making a new object by taking the existing state of the object and copying them into the new one
         ...state,
