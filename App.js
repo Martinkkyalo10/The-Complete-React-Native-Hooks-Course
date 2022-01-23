@@ -10,6 +10,7 @@ import ListScreen from "./src/components/FlatList";
 import ImageScreen from "./src/screens/ImageScreen";
 import CounterScreen from "./src/screens/CounterScreen";
 import ColorScreen from "./src/screens/ColorScreen";
+import SquareScreen from "./src/screens/SquareScreen";
 
 // what is to be dispayed on the screen/ routing
 const navigator = createNativeStackNavigator(
@@ -20,6 +21,7 @@ const navigator = createNativeStackNavigator(
     Image: ImageScreen,
     Counter: CounterScreen,
     Color: ColorScreen,
+    Square: SquareScreen,
   },
   {
     // the first component that should be desplayed
